@@ -10,3 +10,28 @@ canvas {
   width: 100vw; 
   height: 100vh;
 }
+
+#platform {
+	background-color: #0000002f;
+	width: 50vw;
+	height: 100vh;
+	margin: auto;
+	top: -1em;
+	bottom: 0;
+}
+
+div.entry {
+	margin: auto;
+	background-color: #ffffff1a;
+	border: solid 2px white;
+}
+
+* {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        outline: 0;
+        font-size: 100%;
+        vertical-align: baseline;
+        background: transparent;
+}
