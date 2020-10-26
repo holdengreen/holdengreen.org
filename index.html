@@ -43,10 +43,25 @@ varying vec2 tPos;
 uniform float seed;
 uniform float inverted_seed;
 
+uniform vec2 viewport;
+
+float mabs(float a)
+{
+    return a * (float(a>0.0) - float(a<0.0));
+}
+
 void main(void) {
     //gl_FragColor = vec4(gl_FragCoord.x^2.0 / (gl_FragCoord.y*1.0), gl_FragCoord.y^2.0/(gl_FragCoord.x*1.0) seed, 1.0);
     //gl_FragColor = vec4(pow(gl_FragCoord.x, seed*2.0)/1080.0, pow(gl_FragCoord.y, inverted_seed*2.0)/1550.0, 0.8, 1.0);
-    gl_FragColor = vec4(pow(gl_FragCoord.x, seed*2.0)/1080.0, pow(gl_FragCoord.y, inverted_seed*2.0)/1550.0, mod(seed, 0.8), 1.0);
+    float x = gl_FragCoord.x / viewport.x;
+    float y = gl_FragCoord.y / viewport.y;
+    float product = pow(x*100.0, y*50.0);
+    float a = mod(product, 20.0);
+    float aplusb = pow(x, 2.0) + pow(y, 2.0);
+    float max = 2.0;
+    //float diff = pow(seed+0.5, 2.0) - aplusb;
+    float diff = mabs(a - 20.0) / 20.0;
+    gl_FragColor = vec4(diff/2.0, diff/3.0, diff/4.0, 1.0);
     //vec4(tPos * seed, 0.0, 1.0);
 }
 </script>

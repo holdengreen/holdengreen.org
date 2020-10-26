@@ -81,7 +81,8 @@ function startup() {
 
   const shaderUniforms = [
 	  "seed",
-	  "inverted_seed"
+	  "inverted_seed",
+	  "viewport"
   ];
   const shaderAttributes = [
     "aVertexPosition",
@@ -131,6 +132,7 @@ function resize(canvas) {
 }
 
 var seed = 0;
+var increment = 0.005;
 
 function animateScene() {
     // We need an actual window size for correctly viewport setup.
@@ -154,7 +156,10 @@ function animateScene() {
 
     // Select shader program.
     gl.useProgram(shaderProgram.program);
-    seed += 0.01; if(seed >= 1) { seed = 0; }
+    gl.uniform2fv(shaderProgram.uniforms["viewport"], [glCanvas.width, glCanvas.height]);
+
+
+    seed += increment; if(seed >= 1 || seed <= 0) { increment = -increment; }
     inverted_seed = Math.abs(seed-1);
     gl.uniform1f(shaderProgram.uniforms["seed"], seed);
     gl.uniform1f(shaderProgram.uniforms["inverted_seed"], inverted_seed);
