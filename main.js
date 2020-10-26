@@ -79,7 +79,10 @@ function startup() {
     }
   ];
 
-  const shaderUniforms = [];
+  const shaderUniforms = [
+	  "seed",
+	  "inverted_seed"
+  ];
   const shaderAttributes = [
     "aVertexPosition",
     "aTexturePosition"
@@ -127,6 +130,8 @@ function resize(canvas) {
     }
 }
 
+var seed = 0;
+
 function animateScene() {
     // We need an actual window size for correctly viewport setup.
     resize(glCanvas);  
@@ -149,6 +154,10 @@ function animateScene() {
 
     // Select shader program.
     gl.useProgram(shaderProgram.program);
+    seed += 0.01; if(seed >= 1) { seed = 0; }
+    inverted_seed = Math.abs(seed-1);
+    gl.uniform1f(shaderProgram.uniforms["seed"], seed);
+    gl.uniform1f(shaderProgram.uniforms["inverted_seed"], inverted_seed);
     gl.drawArrays(gl.TRIANGLE_STRIP, 0, vertexCount);
 
     window.requestAnimationFrame(function(currentTime) {
