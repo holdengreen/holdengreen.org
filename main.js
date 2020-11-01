@@ -121,14 +121,20 @@ function resize(canvas) {
     var displayWidth  = canvas.clientWidth;
     var displayHeight = canvas.clientHeight;
 
+    canvas.style.width = "1350px";
+    canvas.width = "1350";
+
+    canvas.style.height = "1080px";
+    canvas.height = "1080";
+
     // Check if the canvas has different size and make it the same.
 
-    if (canvas.width  !== displayWidth ||
+    /*if (canvas.width  !== displayWidth ||
         canvas.height !== displayHeight) 
     {
         canvas.width  = displayWidth;
         canvas.height = displayHeight;
-    }
+    }*/
 }
 
 var seed = 0;
@@ -139,7 +145,8 @@ function animateScene() {
     resize(glCanvas);  
 
     // Setup viewport and clear it with black non transparent colour.
-    gl.viewport(0, 0, glCanvas.width, glCanvas.height);
+    gl.viewport(0, 0, 1350, glCanvas.height);
+    console.log(glCanvas.width);
     gl.clearColor(0.0, 0.0, 0.0, 1.0);
     gl.clear(gl.COLOR_BUFFER_BIT);
 
