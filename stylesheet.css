@@ -36,6 +36,10 @@ div.entry_icon {
 div.entry_text {
 }
 
+a.entry {
+	margin-left: 3em;
+}
+
 div.entry {
 	margin: auto;
 	background-color: #ffffff1a;
@@ -49,6 +53,7 @@ li.entry {
 	margin-bottom: 1em;
 }
 
+/*
 * {
         margin: 0;
         padding: 0;
@@ -58,3 +63,4 @@ li.entry {
         vertical-align: baseline;
         background: transparent;
 }
+*/
