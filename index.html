@@ -15,22 +15,48 @@ div.flex-container {
 	justify-content: center;
 	align-items: center;
 	text-align: center;
+	width: 100vw;
+	height: 100vh;
 }
-div.content {
+
+div.content-container {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: center;
+	width: 100vw;
+}
+
+div.links {
+	display: flex;
+	flex-direction: column;
 	background: #aa221111;
 	padding-bottom: 2em;
 	padding-left: 1em;
 	padding-right: 1em;
-	margin:0 auto !important;
-	width: 40em;
 }
 
-div.content h1 { margin-top: 0; }
-div.content h2 { margin-top: 0; }
-div.content h3 { margin-top: 0; }
-div.content h4 { margin-top: 0; }
-div.content h5 { margin-top: 0; }
-div.content h6 { margin-top: 0; }
+div.about {
+	background-color: #11ff2211;
+	text-align: center;
+}
+
+div.links h1 { margin-top: 0; }
+div.links h2 { margin-top: 0; }
+div.links h3 { margin-top: 0; }
+div.links h4 { margin-top: 0; }
+div.links h5 { margin-top: 0; }
+div.links h6 { margin-top: 0; }
+
+div.links .social {
+	display: table;
+}
+div.links .corporatecontrolledsocial {
+}
+div.links .professional {
+}
+div.links .forum {
+}
 
 div.corporatecontrolledsocial {
 	margin-left: 3em;
@@ -64,52 +90,61 @@ div.toppanel a {
 	<a href="./photos">Photos</a>
 </div>
 
-<div class="content">
-<div class="social">
-	<h1>Social</h1>
-	<div style="margin-left:3em">
-	<h4>Mastodon</h4>
-	<a href="https://mastodon.online/@holden" class="entry">@holden@mastodon.online</a>
-	<br>
-	<a href="https://weirder.earth/@holden" class="entry">@holden@weirder.earth</a>
+<div class="content-container">
+
+	<div class="links">
+		<div class="social">
+			<h1>Social</h1>
+			<div style="margin-left:3em">
+			<h4>Mastodon</h4>
+			<a href="https://mastodon.online/@holden" class="entry">@holden@mastodon.online</a>
+			<br>
+			<a href="https://weirder.earth/@holden" class="entry">@holden@weirder.earth</a>
+			</div>
+			<br>
+			<a href="https://lbry.tv/@holden" class="entry">LBRY</a>
+		</div>
+
+		<div class="corporatecontrolledsocial">
+			<h3>And here comes the corporate controlled 'communities'</h3>
+			<h4>Instagram</h4>
+			<a href="https://www.instagram.com/holdenmgreen" class="entry">@holdenmgreen</a>
+			<br>
+			<a href="https://www.instagram.com/green.holden" class="entry">@green.holden</a>
+
+			<h4>Twitter</h4>
+			<a href="https://twitter.com/holdenmgreen" class="entry">@holdenmgreen</a>
+			<br>
+			<a href="https://twitter.com/hgreenlab" class="entry">@hgreenlab</a>
+		</div>
+
+		<div class="professional">
+			<h1>Professional/Semi-Professional</h1>
+			<h5>Sadly both of these sites are owned by Microsoft.</h5>
+			<a href="https://github.com/holdenmgreen" class="entry">Github</a>
+			<br>
+			<a href="https://www.linkedin.com/in/holdenmgreen" class="entry">LinkedIn</a>
+		</div>
+
+		<div class="forum">
+			<h1>Forum</h1>
+			<a href="https://stackexchange.com/users/5687543/holden" class="entry">Stack Exchange</a>
+			<br>
+			<a href="https://www.reddit.com/user/green-holden" class="entry">Reddit</a>
+			<br>
+			<a href="https://en.wikipedia.org/wiki/User:Green.holden" class="entry">Wikipedia</a>
+			<br>
+			<a href="https://t.me/holdengreen" class="entry">Telegram</a>
+			<br>
+			<a href="https://www.minecraftforum.net/members/Sgt_SuiZ" class="entry">Minecraft Forum (archived)</a>
+		</div>
+
 	</div>
-	<br>
-	<a href="https://lbry.tv/@holden" class="entry">LBRY</a>
-</div>
 
-<div class="corporatecontrolledsocial">
-	<h3>And here comes the corporate controlled 'communities'</h3>
-	<h4>Instagram</h4>
-	<a href="https://www.instagram.com/holdenmgreen" class="entry">@holdenmgreen</a>
-	<br>
-	<a href="https://www.instagram.com/green.holden" class="entry">@green.holden</a>
-
-	<h4>Twitter</h4>
-	<a href="https://twitter.com/holdenmgreen" class="entry">@holdenmgreen</a>
-	<br>
-	<a href="https://twitter.com/hgreenlab" class="entry">@hgreenlab</a>
-</div>
-
-<div class="professional">
-	<h1>Professional/Semi-Professional</h1>
-	<h5>Sadly both of these sites are owned by Microsoft.</h5>
-	<a href="https://github.com/holdenmgreen" class="entry">Github</a>
-	<br>
-	<a href="https://www.linkedin.com/in/holdenmgreen" class="entry">LinkedIn</a>
-</div>
-
-<div class="forum">
-	<h1>Forum</h1>
-	<a href="https://stackexchange.com/users/5687543/holden" class="entry">Stack Exchange</a>
-	<br>
-	<a href="https://www.reddit.com/user/green-holden" class="entry">Reddit</a>
-	<br>
-	<a href="https://en.wikipedia.org/wiki/User:Green.holden" class="entry">Wikipedia</a>
-	<br>
-	<a href="https://t.me/holdengreen" class="entry">Telegram</a>
-	<br>
-	<a href="https://www.minecraftforum.net/members/Sgt_SuiZ" class="entry">Minecraft Forum (archived)</a>
-</div>
+	<div class="about">
+		<p>About Me</p>
+		<p>(WIP)</p>
+	</div>
 
 </div>
 
