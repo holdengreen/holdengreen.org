@@ -9,29 +9,46 @@ body {
 	padding: 0 !important;
 	margin: 0 !important;
 }
+div.flex-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
 div.content {
-	margin:0 auto;
 	background: #aa221111;
-	width: 40em;
 	padding-bottom: 2em;
 	padding-left: 1em;
 	padding-right: 1em;
+	margin:0 auto !important;
+	width: 40em;
 }
+
+div.content h1 { margin-top: 0; }
+div.content h2 { margin-top: 0; }
+div.content h3 { margin-top: 0; }
+div.content h4 { margin-top: 0; }
+div.content h5 { margin-top: 0; }
+div.content h6 { margin-top: 0; }
+
 div.corporatecontrolledsocial {
 	margin-left: 3em;
 }
 
-div.rightpanel {
-	margin:0 auto;
+div.toppanel {
+	display: flex;
+	justify-content: center;
 	background-color: #0a22ff22;
-	width: 40em;
-	text-align: center;
+	width: 100vw;
+	
 }
 
-div.rightpanel a {
+div.toppanel a {
 	color: red;
 	font-size: 200%;
 }
+
 </style>
 </head>
 
@@ -41,6 +58,11 @@ div.rightpanel a {
     <canvas id="glcanvas"/>
 </div>
 -->
+
+<div class="flex-display">
+<div class="toppanel">
+	<a href="./photos">Photos</a>
+</div>
 
 <div class="content">
 <div class="social">
@@ -91,11 +113,7 @@ div.rightpanel a {
 
 </div>
 
-<div class="rightpanel">
-	<a href="./photos">Photos</a>
 </div>
-
-
 <!--
 <div id="platform">
 	<ul>
