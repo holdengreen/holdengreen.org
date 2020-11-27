@@ -11,46 +11,53 @@ body {
 }
 div.flex-container {
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
 	justify-content: center;
 	align-items: center;
 	text-align: center;
-	width: 100vw;
-	height: 100vh;
-}
-
-div.content-container {
-	display: flex;
-	flex-wrap: wrap;
-	flex-direction: row;
-	justify-content: center;
 	width: 100vw;
 }
 
 div.links {
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	width: 100vw;
 	background: #aa221111;
-	padding-bottom: 2em;
-	padding-left: 1em;
-	padding-right: 1em;
 }
 
 div.about {
-	background-color: #11ff2211;
+	background-color: #ffff1111;
 	text-align: center;
-	width: 20em;
+	width: 100vw;
+	padding-top: 1em;
+	padding-bottom: 1em;
 }
 
-div.links h1 { margin-top: 0; }
-div.links h2 { margin-top: 0; }
-div.links h3 { margin-top: 0; }
-div.links h4 { margin-top: 0; }
-div.links h5 { margin-top: 0; }
-div.links h6 { margin-top: 0; }
+div.projects {
+	background-color: #11ffff11;
+	width: 100vw;
+	text-align: center;
+}
 
+div.about p {
+	margin: 0;
+}
+
+
+div.flex-container h1 { margin-top: 0; }
+div.flex-container h2 { margin-top: 0; }
+div.flex-container h3 { margin-top: 0; }
+div.flex-container h4 { margin-top: 0; }
+div.flex-container h5 { margin-top: 0; }
+div.flex-container h6 { margin-top: 0; }
+
+div.links div {
+	max-width: 40em;
+	border: 2px dotted black;
+}
 div.links .social {
-	display: table;
 }
 div.links .corporatecontrolledsocial {
 }
@@ -59,8 +66,11 @@ div.links .professional {
 div.links .forum {
 }
 
-div.corporatecontrolledsocial {
-	margin-left: 3em;
+div.category-bar {
+	display: block;
+	width: 100%;
+	background-color: #11ff2211;
+	height: 1em;
 }
 
 div.toppanel {
@@ -93,8 +103,16 @@ div.toppanel a {
 
 <div class="content-container">
 
+	<div class="about">
+		<p>I am new and aspiring netizen persona.</p>
+		<p>This website is dedicated to me, Holden Green.</p>
+		<p>I wish to begin making more of my life and work available online.</p>
+	</div>
+
 	<div class="links">
 		<div class="social">
+			<div class="category-bar">
+			</div>
 			<h1>Social</h1>
 			<div style="margin-left:3em">
 			<h4>Mastodon</h4>
@@ -142,11 +160,14 @@ div.toppanel a {
 
 	</div>
 
-	<div class="about">
-		<p>Holden Green is a new/developing eCeleb.</p>
-		<p>I am very unconventional.</p>
-		<p>Although I mainly exist in my physical form right now, I will soon manifest myself as an increasingly digital persona</p>
+	<div class="projects">
+		<a href="http://greenempower.org">greenempower.org</a>
+		<br>
+		<a href="http://voxim.org">voxim.org</a>
+		</br>
+		<a href="http://hgreenlab.org">hgreenlab.org</a>
 	</div>
+
 
 </div>
 
