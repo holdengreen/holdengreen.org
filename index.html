@@ -9,263 +9,115 @@
 body {
 	padding: 0 !important;
 	margin: 0 !important;
-}
-div.flex-container {
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	align-items: center;
-	text-align: center;
-	width: 100vw;
+
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-image: linear-gradient(to bottom right, #aa2211, #ffff11, #11ffff, #ff11ff, #22ff11)
 }
 
-div.links {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: center;
-	width: 100vw;
-	background: #aa221111;
-	padding-top: 1em;
-	padding-bottom: 1em;
+* {
+	text-shadow:
+       0.5px 0.5px 0 #ff0000,
+     -0.5px -0.5px 0 #00ff00,
+      0.5px -0.5px 0 #0000ff,
+      -0.5px 0.5px 0 #00ff00,
+       0.5px 0.5px 0 #ff0000;
 }
 
-div.about {
-	background-color: #ffff1111;
-	text-align: center;
-	width: 100vw;
-	padding-top: 1em;
-	padding-bottom: 1em;
+/*
+.canvas { 
+	display: block; 
+	top: 0;
+	left: 0;  
+	position: fixed;
+	z-index: -100;
 }
 
-div.projects {
-	background-color: #11ffff11;
-	width: 100vw;
-	text-align: center;
-	padding-top: 1em;
-	padding-bottom: 1em;
+canvas { 
+  width: 100%; 
+  height: 100%;
 }
 
-div.payme {
-	width: 100vw;
-	background-color: #ff11ff11;
-	padding-top: 1em;
-	padding-bottom: 1em;
-}
-
-div.contact {
-	width: 100vw;
-	background-color: #22ff1111;
-	padding-top: 1em;
-	padding-bottom: 1em;
-}
-
-div.about p {
-	margin: 0;
-}
-
-
-div.flex-container h1 { margin-top: 0; }
-div.flex-container h2 { margin-top: 0; }
-div.flex-container h3 { margin-top: 0; }
-div.flex-container h4 { margin-top: 0; }
-div.flex-container h5 { margin-top: 0; }
-div.flex-container h6 { margin-top: 0; }
-
-div.links div {
-	max-width: 40em;
-}
-
-div.links h4 {
-	margin: 0.5em;
-}
-div.links h3 {
-	margin: 0;
-}
-
-div.links .social {
-	text-align: center;
-	margin-right: 2em;
-}
-div.links .mastodon {
-	text-align: center;
-	margin-right: 2em;
-}
-div.links .corporatecontrolledsocial {
-	text-align: center;
-	margin-right: 2em;
-}
-div.links .professional {
-	text-align: center;
-	margin-right: 2em;
-}
-div.links .forum {
-	text-align: center;
-}
-
-div.category-bar {
-	display: block;
+#glcanvas {
 	width: 100%;
-	background-color: #11ff2211;
+	height:100vh;
 }
-
-div.toppanel {
-	display: flex;
-	justify-content: center;
-	background-color: #0a22ff22;
-	width: 100vw;
-	
-}
-
-div.toppanel a {
-	color: red;
-	font-size: 200%;
-}
-
+*/
 </style>
-</head>
-
-<body>
-<!--
-<div class="canvas" style="width:1350px">
-    <canvas id="glcanvas"/>
-</div>
--->
-
-<div class="flex-display">
-<div class="toppanel">
-	<a href="./photos">Photos</a>
-</div>
-
-<div class="content-container">
-
-	<div class="about">
-		<p>I am new and aspiring netizen persona.</p>
-		<p>This website is dedicated to me, Holden Green.</p>
-		<p>I am making more of my life and work available online.</p>
-	</div>
-
-	<div class="links">
-		<div class="social">
-			<div class="category-bar">
-				<h3>Social</h3>
-			</div>
-			<h4>Mastodon</h4>
-			<a rel="me" href="https://mastodon.online/@holden">@holden@mastodon.online</a>
-			<br>
-			<a rel="me" href="https://weirder.earth/@holden">@holden@weirder.earth</a>
-			<h4>LBRY</h4>
-			<a href="https://lbry.tv/@holden">lbry.tv/@holden</a>
-			<h4>Diaspora</h4>
-			<a href="https://diasp.org/people/0a35bf8044950138c2d1047d7b62795e">holdengreen@diasp.org</a>
-		</div>
-
-		<div class="mastodon">
-			<div class="category-bar">
-				<h3>Mastodon+</h3>
-			</div>
-			<a rel="me" href="https://mastodon.technology/@holden">@holden@mastodon.technology</a>
-			<br>
-			<a rel="me" href="https://scholar.social/@holden">@holden@scholar.social</a>
-			<br>
-			<a rel="me" href="https://vocalounge.cafe/@holden">@holden@vocalounge.cafe</a>
-			<br>
-			<a rel="me" href="https://koreadon.com/@holden">@holden@koreadon.com</a>
-		</div>
-
-		<div class="corporatecontrolledsocial">
-			<div class="category-bar">
-				<h3>Corporate Controlled Social</h3>
-			</div>
-			<h4>Instagram</h4>
-			<a href="https://www.instagram.com/holdenmgreen">@holdenmgreen</a>
-			<br>
-			<a href="https://www.instagram.com/green.holden">@green.holden</a>
-
-			<h4>Twitter</h4>
-			<a href="https://twitter.com/holdenmgreen">@holdenmgreen</a>
-			<br>
-			<a href="https://twitter.com/hgreenlab">@hgreenlab</a>
-		</div>
-
-		<div class="professional">
-			<div class="category-bar">
-				<h3>Professional/Semi-Professional</h3>
-			</div>
-			<h5>Sadly both of these sites are owned by Microsoft.</h5>
-			<a href="https://github.com/holdenmgreen">Github</a>
-			<br>
-			<a href="https://www.linkedin.com/in/holdenmgreen">LinkedIn</a>
-		</div>
-
-		<div class="forum">
-			<div class="category-bar">
-				<h3>Other</h3>
-			</div>
-			<a href="https://stackexchange.com/users/5687543/holden">Stack Exchange</a>
-			<br>
-			<a href="https://www.reddit.com/user/green-holden">Reddit</a>
-			<br>
-			<a href="https://en.wikipedia.org/wiki/User:Green.holden">Wikipedia</a>
-			<br>
-			<a href="https://t.me/holdengreen">Telegram</a>
-			<br>
-			<a href="https://www.minecraftforum.net/members/Sgt_SuiZ">Minecraft Forum (archived)</a>
-		</div>
-
-	</div>
-
-	<div class="projects">
-		<a href="http://greenempower.org">greenempower.org</a>
-		<br>
-		<a href="http://voxim.org">voxim.org</a>
-		</br>
-		<a href="http://hgreenlab.com">hgreenlab.com</a>
-	</div>
-
-	<div class="payme">
-		<div style="width:40em; margin: auto; text-align: center;">
-		<script src="https://liberapay.com/holden/widgets/button.js"></script>
-		<noscript><a href="https://liberapay.com/holden/donate"><img alt="Donate using Liberapay" src="https://liberapay.com/assets/widgets/donate.svg"></a></noscript>
-		<br>
-		<a href="https://cash.app/$hgreenlab">cash.app/$hgreenlab</a>
-		<br>
-		<a href="https://ko-fi.com/holdengreen">ko-fi.com/holdengreen</a>
-		<br>
-		<a href="https://paypal.me/hgreen16">paypal.me/hgreen16</a>
-		<br>
-		<address><b>BTC: </b>3Ed229cucw1cfntDcMKhsgKusPNhUBWpWv</address>
-		<address><b>LBC: </b>bNTkN4rLdwYcbk1zrfDsChD7tmnn4Fv69G</address>
-		<address><b>ETH: </b>0x3e7be2b3cef8bad922f3726203df84390eee392b</address>
-        <address><b>LTC: </b>MLgbSFpt8behpHjC5MSonnYp4RYsFSTyVa</address>
-		<address><b>GUSD: </b>0x3e7be2b3cef8bad922f3726203df84390eee392b</address>
-		</div>
-	</div>
-
-	<div class="contact">
-		<div style="width: 20em; margin: auto; text-align: center;">
-			<address><b>casual: </b><a href="mailto:awesomeholdengreen@gmail.com">awesomeholdengreen@gmail.com</a></address>
-			<address><b>professional: </b><a href="mailto:holdenmgreen@gmail.com">holdenmgreen@gmail.com</a></address>
-			<address><b>new: </b><a href="mailto:me@holdengreen.org">me@holdengreen.org</a></address>
-		</div>
-	</div>
+<!--<canvas id="glcanvas"></canvas>-->
 
 
-</div>
 
-</div>
-<!--
-<div id="platform">
-	<ul>
-		<li class="entry">
-			<p style="color:white; text-align:center; word-wrap: break-word; font-size: 4em">Something about a laxy fox.</p>
-		</li>
-		<li class="entry">
-			<p style="color:white; text-align:center; word-wrap: break-word; font-size: 4em">Instagram</p>
-		</li>
-	</ul>
-</div>
--->
+<h1>About</h1>
+<p>I am new and aspiring netizen persona. This website is dedicated to me, Holden Green. I am making more of my life and work available online.</p>
+
+<h1>Projects</h1>
+<ul>
+	<a href="http://greenempower.org">The Green Empower Organization</a> <br>
+	<a href="http://voxim.org">The Voxim Project</a> <br>
+	<a href="http://greenie.media">Greenie Media</a> <br>
+	<a href="http://hgreenlab.com">hgreenlab.com</a>
+</ul>
+
+<h1>Decentralized</h1>
+<ul>
+	<a href="https://lbry.tv/@holden">lbry.tv/@holden</a> <br>
+	<a href="https://diasp.org/people/0a35bf8044950138c2d1047d7b62795e">holdengreen@diasp.org</a> <br>
+</ul>
+<h3>Mastodon</h3>
+<ul>
+	<a rel="me" href="https://weirder.earth/@holden">@holden@weirder.earth</a> <br>
+	<a rel="me" href="https://mastodon.technology/@holden">@holden@mastodon.technology</a> <br>
+	<a rel="me" href="https://mastodon.online/@holden">@holden@mastodon.online</a> <br>
+	<a rel="me" href="https://scholar.social/@holden">@holden@scholar.social</a> <br>
+	<a rel="me" href="https://vocalounge.cafe/@holden">@holden@vocalounge.cafe</a> <br>
+	<a rel="me" href="https://koreadon.com/@holden">@holden@koreadon.com</a>
+</ul>
+
+<h1>Forum & More</h1>
+<ul>
+	<a href="https://stackexchange.com/users/5687543/holden">Stack Exchange</a></li> <br>
+	<a href="https://www.reddit.com/user/green-holden">Reddit</a> <br>
+	<a href="https://en.wikipedia.org/wiki/User:Green.holden">Wikipedia</a> <br>
+	<a href="https://t.me/holdengreen">Telegram</a> <br>
+	<a href="https://www.minecraftforum.net/members/Sgt_SuiZ">Minecraft Forum (archived)</a>
+</ul>
+
+<h1>Corporate 'Communities'</h1>
+<h2>Instagram</h2>
+<ul>
+	<a href="https://www.instagram.com/green.holden">@green.holden</a> <br>
+	<a href="https://www.instagram.com/holdenmgreen">@holdenmgreen</a>
+</ul>
+
+<h2>Twitter</h2>
+<ul>
+	<a href="https://twitter.com/hgreenlab">@hgreenlab</a> <br>
+	<a href="https://twitter.com/holdenmgreen">@holdenmgreen</a>
+</ul>
+
+<h1>Pay Me</h1>
+<ul>
+	<script src="https://liberapay.com/holden/widgets/button.js"></script>
+	<noscript><a href="https://liberapay.com/holden/donate"><img alt="Donate using Liberapay" src="https://liberapay.com/assets/widgets/donate.svg"></a></noscript> <br>
+	<a href="https://cash.app/$hgreenlab">cash.app/$hgreenlab</a> <br>
+	<a href="https://ko-fi.com/holdengreen">ko-fi.com/holdengreen</a> <br>
+	<a href="https://paypal.me/hgreen16">paypal.me/hgreen16</a> <br>
+	<address><b>BTC: </b>3Ed229cucw1cfntDcMKhsgKusPNhUBWpWv</address>
+	<address><b>LBC: </b>bNTkN4rLdwYcbk1zrfDsChD7tmnn4Fv69G</address>
+	<address><b>ETH: </b>0x3e7be2b3cef8bad922f3726203df84390eee392b</address>
+	<address><b>LTC: </b>MLgbSFpt8behpHjC5MSonnYp4RYsFSTyVa</address>
+	<address><b>GUSD: </b>0x3e7be2b3cef8bad922f3726203df84390eee392b</address>
+</ul>
+
+<h1>Contact</h1>
+<ul>
+	<address><b>casual: </b><a href="mailto:awesomeholdengreen@gmail.com">awesomeholdengreen@gmail.com</a></address>
+	<address><b>professional: </b><a href="mailto:holdenmgreen@gmail.com">holdenmgreen@gmail.com</a></address>
+	<address><b>new: </b><a href="mailto:me@holdengreen.org">me@holdengreen.org</a></address>
+</ul>
+
+
 
 </body>
 </html>

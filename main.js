@@ -121,11 +121,11 @@ function resize(canvas) {
     var displayWidth  = canvas.clientWidth;
     var displayHeight = canvas.clientHeight;
 
-    canvas.style.width = "1350px";
-    canvas.width = "1350";
+    //canvas.style.width = "1350px";
+    canvas.width = displayWidth;
 
-    canvas.style.height = "1080px";
-    canvas.height = "1080";
+    //canvas.style.height = "1080px";
+    canvas.height = displayHeight;
 
     // Check if the canvas has different size and make it the same.
 
