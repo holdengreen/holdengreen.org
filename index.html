@@ -12,7 +12,7 @@ body {
 
 	background-repeat: no-repeat;
 	background-attachment: fixed;
-	background-image: linear-gradient(to bottom right, #aa2211, #ffff11, #11ffff, #ff11ff, #22ff11)
+	background-image: linear-gradient(to bottom right, #aa221140, #ffff1140, #11ffff40, #ff11ff40, #22ff1140)
 }
 
 * {
@@ -23,6 +23,17 @@ body {
       -0.5px 0.5px 0 #00ff00,
        0.5px 0.5px 0 #ff0000;
 }
+
+h1, h2, h3, ul, p, a {
+	text-align: center;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+	margin-bottom: 2em;
+}
+
 
 /*
 .canvas { 
@@ -46,10 +57,12 @@ canvas {
 </style>
 <!--<canvas id="glcanvas"></canvas>-->
 
+<div>
 
 <ul>
 	<a href="./faves">faves</a>
 	<a href="./knowledge">knowledge</a>
+	<a href="./philosophy">philosophy</a>
 	<a href="./photos">photos</a>
 	<a href="./endorsements">endorsements</a>
 	<a href="./professional">professional</a>
@@ -66,8 +79,14 @@ canvas {
 	<a href="./acknowledgments">acknowledgments</a>
 </ul>
 
-<h1>About</h1>
-<p>I am new and aspiring netizen persona. This website is dedicated to me, Holden Green. I am making more of my life and work available online.</p>
+<h1 style="text-align: center">About</h1>
+<p style="margin-bottom: 2em">I am new and aspiring netizen persona. This website is dedicated to me, Holden Green. I am making more of my life and work available online.</p>
+
+<div style="width:100vw box-sizing: border-box">
+	<div style="border: 1em ridge green;">
+	<img style="max-width: 100%" src="https://raw.githubusercontent.com/holdengreen/photos/main/selfies/26.jpg"/>
+	</div>
+</div>
 
 <h1>Professional</h1>
 <ul>
@@ -145,6 +164,7 @@ canvas {
 	<address><b>new: </b><a href="mailto:me@holdengreen.org">me@holdengreen.org</a></address>
 </ul>
 
+</div>
 
 
 
