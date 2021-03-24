@@ -1,3 +1,15 @@
+h1, h2, h3, h4, h5, h6 {
+    font-family: fredoka one;
+    color: #204f00;
+    -webkit-text-stroke: 0.05em pink;
+}
+
+p, a, li {
+    font-family: 'Inconsolata';
+    /*color: #AA98A9;*/
+}
+
+
 .canvas { 
 	display: block; 
 	top: 0;
