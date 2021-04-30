@@ -1,3 +1,9 @@
+@font-face {
+    font-family: Helvetica Black;
+    src: url(./fonts/Helvetica_Black.woff);
+    font-weight: bold;
+}
+
 h1, h2, h3, h4, h5, h6 {
     font-family: fredoka one;
     color: #204f00;
@@ -5,7 +11,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 p, a, li {
-    font-family: 'Inconsolata';
+    font-family: 'Helvetica Black';
     /*color: #AA98A9;*/
 }
 
